@@ -67,7 +67,7 @@ Mi experiencia combina desarrollo frontend y backend, diseño de APIs, bases de 
 Actualmente continúo desarrollando mi perfil hacia los datos, la analítica y la inteligencia artificial, complementando mi experiencia en ingeniería de software con una Maestría en Analítica e Inteligencia de Negocios.`,
       valueTitle: 'Propuesta de valor',
       value: `Convierto necesidades de negocio y operación en soluciones de software que pueden desarrollarse, desplegarse y evolucionar de forma sostenible. Combino desarrollo Full-Stack, datos, automatización y prácticas DevOps para participar en todo el ciclo de vida del software, buscando que una solución no sólo funcione, sino que también sea mantenible, integrable y preparada para producción.`,
-      expanding: 'Expanding into Data, Analytics & AI',
+      expanding: 'En expansión: Datos, Analítica e IA',
     },
     en: {
       title: 'About',

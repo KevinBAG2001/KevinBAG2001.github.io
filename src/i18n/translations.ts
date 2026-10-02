@@ -24,7 +24,8 @@ export const copy = {
       education: 'Formación',
       contact: 'Contacto',
       viewProjects: 'Ver proyectos',
-      caseStudy: 'Case study',
+      caseStudy: 'Caso de estudio',
+      caseStudyAbyssan: 'Caso de estudio: Abyssan',
       backHome: 'Inicio',
     },
     en: {
@@ -38,6 +39,7 @@ export const copy = {
       contact: 'Contact',
       viewProjects: 'View projects',
       caseStudy: 'Case study',
+      caseStudyAbyssan: 'Case study: Abyssan',
       backHome: 'Home',
     },
   },
@@ -49,6 +51,8 @@ export const copy = {
       headline: 'Construyo software para problemas reales, desde la idea hasta producción.',
       oneLiner:
         'Desarrollo software de extremo a extremo, conectando desarrollo, datos y entrega para llevar soluciones desde la idea hasta producción.',
+      availability: 'Disponible para freelance y trabajo remoto',
+      abyssanCaseStudy: 'Caso de estudio: Abyssan',
     },
     en: {
       name: 'Kevin Bryan Austria Galvan',
@@ -57,6 +61,46 @@ export const copy = {
       headline: 'Building real-world software from idea to production.',
       oneLiner:
         'I build end-to-end software, connecting development, data, and delivery to take solutions from idea to production.',
+      availability: 'Available for freelance & remote work',
+      abyssanCaseStudy: 'Case study: Abyssan',
+    },
+  },
+  heroVisual: {
+    es: {
+      pipelineLabel: 'gitlab-ci · dev/qa/main',
+      deployLine: 'deploy #50+ ✔ production',
+      branchFlow: 'Ramas dev → qa → main · despliegue continuo',
+      impactCards: [
+        { metric: '50+', label: 'Despliegues a producción vía GitLab CI/CD' },
+        { metric: '15 h → 5 min', label: 'Generación de reportes automatizados' },
+        { metric: '100+', label: 'Empleados en sistema integral de RRHH' },
+      ],
+    },
+    en: {
+      pipelineLabel: 'gitlab-ci · dev/qa/main',
+      deployLine: 'deploy #50+ ✔ production',
+      branchFlow: 'Branches dev → qa → main · continuous deployment',
+      impactCards: [
+        { metric: '50+', label: 'Production deploys via GitLab CI/CD' },
+        { metric: '15 h → 5 min', label: 'Automated report generation' },
+        { metric: '100+', label: 'Employees on integrated HR system' },
+      ],
+    },
+  },
+  projectsArch: {
+    es: {
+      title: 'Arquitectura',
+      web: 'Web SPA',
+      api: 'API Express',
+      git: 'Git adapter',
+      ws: 'WebSocket · cambios en repo',
+    },
+    en: {
+      title: 'Architecture',
+      web: 'Web SPA',
+      api: 'Express API',
+      git: 'Git adapter',
+      ws: 'WebSocket · repo changes',
     },
   },
   about: {
@@ -81,12 +125,16 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
   },
   stack: {
     es: {
-      title: 'What I work with',
-      core: 'Core',
-      supporting: 'Supporting',
-      practices: 'Engineering practices',
-      growing: 'Growing',
+      title: 'Con qué trabajo',
+      core: 'Núcleo',
+      supporting: 'Complemento',
+      practices: 'Prácticas de ingeniería',
+      growing: 'En crecimiento',
       evidence: 'Profundidad por evidencia',
+      rowFrontend: 'Frontend',
+      rowBackend: 'Backend',
+      rowData: 'Datos',
+      rowDevops: 'DevOps',
     },
     en: {
       title: 'What I work with',
@@ -95,12 +143,16 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
       practices: 'Engineering practices',
       growing: 'Growing',
       evidence: 'Depth by evidence',
+      rowFrontend: 'Frontend',
+      rowBackend: 'Backend',
+      rowData: 'Data',
+      rowDevops: 'DevOps',
     },
   },
   howBuild: {
     es: {
-      title: 'How I build',
-      flow: 'Build → Test → Automate → Deploy → Improve',
+      title: 'Cómo construyo',
+      flow: 'Construir → Probar → Automatizar → Desplegar → Mejorar',
       architecture: 'Arquitectura — Diseño por capas, contratos claros y separación de responsabilidades.',
       development: 'Desarrollo — APIs REST, frontends mantenibles y dominio alineado al negocio.',
       data: 'Datos — Modelado relacional, consultas eficientes y trazabilidad en producción.',
@@ -120,11 +172,13 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
   projects: {
     es: {
       title: 'Proyectos destacados',
+      subtitle: 'Open source y trabajo profesional (casos anonimizados)',
       openSource: 'Open Source / Personal',
-      professional: 'Professional Work',
+      professional: 'Trabajo profesional',
     },
     en: {
       title: 'Featured projects',
+      subtitle: 'Open source and professional work (anonymized cases)',
       openSource: 'Open Source / Personal',
       professional: 'Professional Work',
     },

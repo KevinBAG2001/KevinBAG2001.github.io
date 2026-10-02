@@ -36,10 +36,10 @@ export function StackSection() {
           <div className="glass-panel rounded-2xl p-5 lg:col-span-2">
             <h3 className="font-mono text-xs tracking-wider text-[var(--color-text-muted)] uppercase">{s.core}</h3>
             <div className="mt-4 space-y-4 text-sm">
-              <Row label="Frontend" items={stackData.core.frontend} />
-              <Row label="Backend" items={stackData.core.backend} />
-              <Row label="Data" items={stackData.core.data} />
-              <Row label="DevOps" items={stackData.core.devops} />
+              <Row label={s.rowFrontend} items={stackData.core.frontend} />
+              <Row label={s.rowBackend} items={stackData.core.backend} />
+              <Row label={s.rowData} items={stackData.core.data} />
+              <Row label={s.rowDevops} items={stackData.core.devops} />
             </div>
           </div>
           <div className="glass-panel rounded-2xl p-5">

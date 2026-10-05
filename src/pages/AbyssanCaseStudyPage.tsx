@@ -13,7 +13,7 @@ export function AbyssanCaseStudyPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <Link
-        to="/"
+        to="/classic"
         className="inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
       >
         <ArrowLeft size={16} />

@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import { useLocale } from '../context/LocaleContext'
 import { copy } from '../i18n/translations'
-
-export function useDocumentMeta(page?: 'home' | 'abyssan') {
+export function useDocumentMeta(page?: 'home' | 'abyssan' | 'desktop') {
   const { locale } = useLocale()
 
   useEffect(() => {
+    if (page === 'desktop') return
     const meta = copy.meta[locale]
     document.title = page === 'abyssan' ? `Abyssan — ${meta.title}` : meta.title
 

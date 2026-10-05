@@ -13,7 +13,7 @@ export function Header() {
   const t = copy.nav[locale]
   const [open, setOpen] = useState(false)
   const location = useLocation()
-  const isHome = location.pathname === '/'
+  const isHome = location.pathname === '/classic'
 
   const link = (id: string, label: string) =>
     isHome ? (
@@ -26,7 +26,7 @@ export function Header() {
       </a>
     ) : (
       <Link
-        to={`/#${id}`}
+        to={`/classic#${id}`}
         className="text-sm text-[var(--color-text-muted)] transition hover:text-[var(--color-text)]"
         onClick={() => setOpen(false)}
       >
@@ -49,7 +49,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-[var(--color-border-subtle)] bg-[color-mix(in_srgb,var(--color-surface)_88%,transparent)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link
-          to="/"
+          to="/classic"
           className="font-mono text-sm font-medium tracking-tight text-[var(--color-text)]"
           onClick={() => setOpen(false)}
         >

@@ -2,6 +2,16 @@
 
 Personal site for [kevinbag2001.github.io](https://kevinbag2001.github.io).
 
+## Kevin OS (default)
+
+The site boots into **Kevin OS** — a desktop-style portfolio (windows, dock, terminal, ES/EN) inspired by OS-metaphor portfolios but built with Kevin’s brand, projects, and copy from `brand-spec-v1`.
+
+- **`/`** — Kevin OS desktop
+- **`/classic`** — scrollable bento portfolio (previous layout)
+- **`/projects/abyssan`** — standalone Abyssan case study
+
+Open apps from the left sidebar or bottom dock. Terminal commands: `help`, `about`, `projects`, `stack`, `whoami`, `hire`, `clear`.
+
 ## Stack
 
 - React 19 + TypeScript + Vite

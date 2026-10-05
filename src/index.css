@@ -49,6 +49,21 @@ body {
   backdrop-filter: blur(16px);
 }
 
+.os-wallpaper {
+  background-color: var(--color-surface);
+  background-image:
+    radial-gradient(ellipse 70% 45% at 50% 0%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 55%),
+    radial-gradient(ellipse 50% 35% at 100% 80%, color-mix(in srgb, #6366f1 10%, transparent), transparent),
+    linear-gradient(var(--color-border-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border-subtle) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    56px 56px,
+    56px 56px;
+  opacity: 0.95;
+}
+
 .mesh-bg {
   background-image:
     radial-gradient(ellipse 80% 50% at 20% -10%, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent),

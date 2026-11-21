@@ -1,5 +1,5 @@
 import { Mail } from 'lucide-react'
-import { GitHubIcon, GitLabIcon } from '../icons/BrandIcons'
+import { GitHubIcon, GitLabIcon, LinkedInIcon } from '../icons/BrandIcons'
 import { Reveal } from '../Reveal'
 import { useLocale } from '../../context/LocaleContext'
 import { copy } from '../../i18n/translations'
@@ -19,6 +19,15 @@ export function ContactSection() {
           >
             <Mail size={18} className="text-[var(--color-accent)]" />
             {c.email}
+          </a>
+          <a
+            href={c.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-panel inline-flex items-center gap-3 rounded-xl px-5 py-4 text-sm transition hover:border-[var(--color-accent)]/50"
+          >
+            <LinkedInIcon size={18} className="text-[var(--color-accent)]" />
+            {c.linkedin}
           </a>
           <a
             href="https://github.com/KevinBAG2001"

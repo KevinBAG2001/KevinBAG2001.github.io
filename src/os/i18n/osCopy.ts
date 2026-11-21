@@ -99,12 +99,12 @@ export const osCopy = {
     es: {
       tabs: { experience: 'Experiencia', education: 'Formación', impact: 'Impacto' },
       downloadHint: 'CV PDF (si está disponible en el sitio)',
-      noCv: 'Los PDF del CV se publicarán en public/assets/cv/ cuando estén listos.',
+      noCv: 'CV disponible a solicitud por correo — los PDF volverán al sitio cuando estén actualizados.',
     },
     en: {
       tabs: { experience: 'Experience', education: 'Education', impact: 'Impact' },
       downloadHint: 'CV PDF (when available on the site)',
-      noCv: 'CV PDFs will appear under public/assets/cv/ when published.',
+      noCv: 'CV available on request by email — PDFs return when updated.',
     },
   },
   contactApp: {
@@ -114,7 +114,7 @@ export const osCopy = {
       message: 'Mensaje',
       send: 'Enviar correo',
       linkedin: 'LinkedIn',
-      linkedinNote: 'Perfil público (añade URL cuando lo compartas).',
+      linkedinNote: 'Perfil público en LinkedIn.',
     },
     en: {
       intro: 'Direct email or public repos. The form opens your mail client.',
@@ -122,7 +122,7 @@ export const osCopy = {
       message: 'Message',
       send: 'Send email',
       linkedin: 'LinkedIn',
-      linkedinNote: 'Public profile (add URL when you share it).',
+      linkedinNote: 'Public LinkedIn profile.',
     },
   },
   terminal: {

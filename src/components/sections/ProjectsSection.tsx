@@ -45,6 +45,7 @@ export function ProjectsSection() {
   const { locale } = useLocale()
   const p = copy.projects[locale]
   const aby = projectsData.abyssan[locale]
+  const bas = projectsData.bastion[locale]
   const doc = projectsData.docMgmt[locale]
   const per = projectsData.personnel[locale]
   const pre = projectsData.predial[locale]
@@ -58,8 +59,9 @@ export function ProjectsSection() {
       </Reveal>
 
       <Reveal delay={0.05}>
-        <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-6 lg:grid-rows-[auto_auto_auto]">
-          <article className="group glass-panel relative flex flex-col overflow-hidden rounded-2xl lg:col-span-4 lg:row-span-3 transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)]/35 hover:shadow-[0_24px_60px_-28px_rgba(16,185,129,0.35)]">
+        <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-6 lg:grid-rows-[auto_auto]">
+          <div className="flex flex-col gap-4 lg:col-span-4">
+          <article className="group glass-panel relative flex flex-col overflow-hidden rounded-2xl transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)]/35 hover:shadow-[0_24px_60px_-28px_rgba(16,185,129,0.35)]">
             <div className="border-b border-[var(--color-border-subtle)] bg-[#0f111a] px-6 py-5">
               <img
                 src="/assets/projects/abyssan/banner.svg"
@@ -108,7 +110,49 @@ export function ProjectsSection() {
             </div>
           </article>
 
-          <div className="flex flex-col gap-4 lg:col-span-2 lg:row-span-3">
+          <article className="group glass-panel flex flex-col rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-500/35">
+            <div className="flex flex-wrap items-center gap-2">
+              <StatusBadge status="OPEN_SOURCE" />
+              <StatusBadge status="IN_DEVELOPMENT" />
+            </div>
+            <img
+              src="/assets/projects/bastion/logo.svg"
+              alt=""
+              className="mt-4 h-12 w-12"
+              width={48}
+              height={48}
+              loading="lazy"
+            />
+            <h3 className="mt-4 text-lg font-semibold tracking-tight">{bas.title}</h3>
+            <p className="mt-1 text-sm text-[var(--color-accent)]">{bas.tagline}</p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">{bas.summary}</p>
+            <ul className="mt-3 space-y-2 text-sm text-[var(--color-text-muted)]">
+              {bas.highlights.slice(0, 2).map((h) => (
+                <li key={h} className="border-l border-sky-500/40 pl-3">
+                  {h}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-5 flex flex-wrap gap-3 text-sm">
+              <a
+                href={projectsData.bastion.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-[var(--color-accent)] hover:underline"
+              >
+                GitHub <ExternalLink size={14} />
+              </a>
+              <Link
+                to="/projects/bastion"
+                className="rounded-lg border border-[var(--color-border)] px-3 py-1.5 text-[var(--color-text)] transition hover:border-[var(--color-accent)]/50"
+              >
+                {nav.caseStudyBastion} →
+              </Link>
+            </div>
+          </article>
+          </div>
+
+          <div className="flex flex-col gap-4 lg:col-span-2 lg:row-span-2">
             <p className="font-mono text-[10px] tracking-wider text-[var(--color-text-muted)] uppercase">
               {p.professional}
             </p>

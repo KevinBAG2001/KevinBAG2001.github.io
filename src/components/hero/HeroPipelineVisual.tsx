@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { useLocale } from '../../context/LocaleContext'
+import { buildStats } from '../../generated/buildStats'
 import { copy } from '../../i18n/translations'
 
 const stages = ['dev', 'qa', 'main'] as const
@@ -89,7 +90,14 @@ export function HeroPipelineVisual() {
       </div>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-        {v.impactCards.map((card, i) => (
+        {v.impactCards.map((card, i) => {
+          const metric =
+            card.metric === '__PUBLIC_REPOS__' && buildStats.publicRepos != null
+              ? String(buildStats.publicRepos)
+              : card.metric === '__PUBLIC_REPOS__'
+                ? '—'
+                : card.metric
+          return (
           <motion.div
             key={card.label}
             className="glass-panel rounded-xl border border-[var(--color-border-subtle)] p-4 transition hover:border-[var(--color-accent)]/30"
@@ -97,10 +105,10 @@ export function HeroPipelineVisual() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 + i * 0.08, duration: 0.45 }}
           >
-            <p className="font-mono text-lg font-semibold text-[var(--color-accent)]">{card.metric}</p>
+            <p className="font-mono text-lg font-semibold text-[var(--color-accent)]">{metric}</p>
             <p className="mt-1 text-xs leading-snug text-[var(--color-text-muted)]">{card.label}</p>
           </motion.div>
-        ))}
+        )})}
       </div>
     </div>
   )

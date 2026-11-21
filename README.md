@@ -46,4 +46,4 @@ After merging to `main`, the workflow publishes the site at https://kevinbag2001
 
 ## Content
 
-Copy and structure follow the approved brand spec (`brand-spec-v1`). CV PDFs live in `public/assets/cv/`.
+Copy and structure follow the approved brand spec (`brand-spec-v1`). CV PDFs are not published until ready — request via contact email.

@@ -1,3 +1,4 @@
+import { Mail } from 'lucide-react'
 import { useState } from 'react'
 import { useLocale } from '../../context/LocaleContext'
 import { copy } from '../../i18n/translations'
@@ -12,6 +13,7 @@ export function ResumeApp() {
   const exp = copy.experience[locale]
   const edu = copy.education[locale]
   const impact = copy.impact[locale]
+  const contact = copy.contact[locale]
 
   const tabs: { id: Tab; label: string }[] = [
     { id: 'experience', label: t.tabs.experience },
@@ -26,22 +28,13 @@ export function ResumeApp() {
           <p className="font-semibold">{copy.hero[locale].name}</p>
           <p className="text-xs text-[var(--color-text-muted)]">{copy.hero[locale].role}</p>
         </div>
-        <div className="flex gap-2 text-xs">
-          <a
-            href="/assets/cv/cv-es.pdf"
-            className="rounded-lg border border-[var(--color-border)] px-2 py-1 hover:bg-[var(--color-surface)]"
-            download
-          >
-            {edu.cvEs}
-          </a>
-          <a
-            href="/assets/cv/cv-en.pdf"
-            className="rounded-lg border border-[var(--color-border)] px-2 py-1 hover:bg-[var(--color-surface)]"
-            download
-          >
-            {edu.cvEn}
-          </a>
-        </div>
+        <a
+          href={`mailto:${contact.email}?subject=${encodeURIComponent(locale === 'es' ? 'Solicitud de CV' : 'CV request')}`}
+          className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-[var(--color-border)] px-2 py-1 text-xs hover:bg-[var(--color-surface)]"
+        >
+          <Mail size={14} />
+          {edu.cvOnRequest}
+        </a>
       </div>
       <div className="flex gap-1 border-b border-[var(--color-border-subtle)] px-4 py-2">
         {tabs.map(({ id, label }) => (

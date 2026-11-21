@@ -58,7 +58,7 @@ export function runTerminalCommand(input: string, locale: Locale): TerminalLine[
     }
     case 'projects':
     case 'ls': {
-      const keys = ['abyssan', 'docMgmt', 'personnel', 'predial'] as const
+      const keys = ['abyssan', 'bastion', 'docMgmt', 'personnel', 'predial'] as const
       return lines(
         ...keys.map((key) => {
           const p = projectsData[key]
@@ -73,12 +73,15 @@ export function runTerminalCommand(input: string, locale: Locale): TerminalLine[
         copy.contact[locale].email,
         'https://github.com/KevinBAG2001',
         'https://gitlab.com/KevinBAG2001',
+        copy.contact[locale].linkedinUrl,
       )
     case 'deploy':
       return lines(
         'gitlab-ci · dev → qa → main',
-        'deploy #50+ ✔ production',
-        locale === 'es' ? 'Sin humo — solo métricas verificadas del CV.' : 'No fluff — CV-verified metrics only.',
+        'deploy #105 ✔ production',
+        locale === 'es'
+          ? 'may–sep 2026: 307 MRs fusionados · 105 cambios a producción'
+          : 'May–Sep 2026: 307 merged MRs · 105 production releases',
       )
     case 'sudo':
       return [{ type: 'err', text: locale === 'es' ? 'Nice try. Usa hire si quieres hablar.' : 'Nice try. Use hire if you want to talk.' }]

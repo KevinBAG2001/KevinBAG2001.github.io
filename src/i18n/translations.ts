@@ -26,6 +26,7 @@ export const copy = {
       viewProjects: 'Ver proyectos',
       caseStudy: 'Caso de estudio',
       caseStudyAbyssan: 'Caso de estudio: Abyssan',
+      caseStudyBastion: 'Caso de estudio: Bastion',
       backHome: 'Inicio',
     },
     en: {
@@ -40,6 +41,7 @@ export const copy = {
       viewProjects: 'View projects',
       caseStudy: 'Case study',
       caseStudyAbyssan: 'Case study: Abyssan',
+      caseStudyBastion: 'Case study: Bastion',
       backHome: 'Home',
     },
   },
@@ -52,7 +54,9 @@ export const copy = {
       oneLiner:
         'Desarrollo software de extremo a extremo, conectando desarrollo, datos y entrega para llevar soluciones desde la idea hasta producción.',
       availability: 'Disponible para freelance y trabajo remoto',
+      languages: 'Español nativo · Inglés básico',
       abyssanCaseStudy: 'Caso de estudio: Abyssan',
+      bastionCaseStudy: 'Caso de estudio: Bastion',
     },
     en: {
       name: 'Kevin Bryan Austria Galvan',
@@ -62,28 +66,36 @@ export const copy = {
       oneLiner:
         'I build end-to-end software, connecting development, data, and delivery to take solutions from idea to production.',
       availability: 'Available for freelance & remote work',
+      languages: 'Native Spanish · Basic English',
       abyssanCaseStudy: 'Case study: Abyssan',
+      bastionCaseStudy: 'Case study: Bastion',
     },
   },
   heroVisual: {
     es: {
       pipelineLabel: 'gitlab-ci · dev/qa/main',
-      deployLine: 'deploy #50+ ✔ production',
+      deployLine: 'deploy #105 ✔ production',
       branchFlow: 'Ramas dev → qa → main · despliegue continuo',
       impactCards: [
-        { metric: '50+', label: 'Despliegues a producción vía GitLab CI/CD' },
-        { metric: '15 h → 5 min', label: 'Generación de reportes automatizados' },
-        { metric: '100+', label: 'Empleados en sistema integral de RRHH' },
+        { metric: '307', label: 'MRs fusionados (may–sep 2026) en 4 proyectos' },
+        { metric: '105', label: 'Cambios liberados a producción (mismo periodo)' },
+        {
+          metric: '__PUBLIC_REPOS__',
+          label: 'Repos públicos en GitHub (actualizado en build)',
+        },
       ],
     },
     en: {
       pipelineLabel: 'gitlab-ci · dev/qa/main',
-      deployLine: 'deploy #50+ ✔ production',
+      deployLine: 'deploy #105 ✔ production',
       branchFlow: 'Branches dev → qa → main · continuous deployment',
       impactCards: [
-        { metric: '50+', label: 'Production deploys via GitLab CI/CD' },
-        { metric: '15 h → 5 min', label: 'Automated report generation' },
-        { metric: '100+', label: 'Employees on integrated HR system' },
+        { metric: '307', label: 'Merged MRs (May–Sep 2026) across 4 projects' },
+        { metric: '105', label: 'Production releases in the same period' },
+        {
+          metric: '__PUBLIC_REPOS__',
+          label: 'Public GitHub repos (updated at build time)',
+        },
       ],
     },
   },
@@ -187,19 +199,19 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
     es: {
       title: 'Impacto',
       items: [
-        '50+ despliegues a producción vía GitLab CI/CD (ramas dev/qa/main)',
-        'Reportes automatizados: de 15 horas a 5 minutos',
-        'Sistema integral de RRHH para 100+ empleados (Laravel 11, PHP, PostgreSQL)',
-        'Dirigió 3 sistemas internos en administración pública (.NET, C#, PHP, JavaScript, SQL Server); coordinación de hasta 4 desarrolladores',
+        'may–sep 2026: 307 merge requests fusionados en 4 proyectos y 105 cambios liberados a producción (GitLab CI/CD, ramas dev/qa/main).',
+        'Sistema integral de RH para sector público: expedientes digitales, reportes PDF/Excel y despliegues controlados.',
+        'Plataforma de operaciones de personal (React 19, FastAPI, PostgreSQL 16, Docker) en evolución activa.',
+        'Coordinación técnica de hasta 4 desarrolladores en sistemas internos de gobierno municipal.',
       ],
     },
     en: {
       title: 'Impact',
       items: [
-        '50+ production deployments via GitLab CI/CD (dev/qa/main branches)',
-        'Automated reports: from 15 hours down to 5 minutes',
-        'Integrated HR system for 100+ employees (Laravel 11, PHP, PostgreSQL)',
-        'Led 3 internal systems for public administration (.NET, C#, PHP, JavaScript, SQL Server); coordinated up to 4 developers',
+        'May–Sep 2026: 307 merged MRs across 4 projects and 105 production releases (GitLab CI/CD, dev/qa/main).',
+        'Integrated public-sector HR system: digital records, PDF/Excel reporting, and controlled deployments.',
+        'Personnel operations platform (React 19, FastAPI, PostgreSQL 16, Docker) under active development.',
+        'Technical coordination of up to 4 developers on internal municipal government systems.',
       ],
     },
   },
@@ -210,20 +222,20 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
         {
           period: 'Abr 2026 – Actualidad',
           title: 'Líder de Proyecto — Sistema Integral de Recursos Humanos',
-          org: 'IMSS-Bienestar',
+          org: 'Sector público (salud)',
           bullets: [
-            'Diseño y desarrollo de sistema integral con Laravel 11, PHP y PostgreSQL.',
-            'Gestión documental y expedientes digitales integrados con Alfresco.',
+            'Diseño y evolución de un sistema integral de RH para sector público (React 19, TypeScript, Vite, FastAPI, PostgreSQL 16, Docker).',
+            'Gestión documental y expedientes digitales integrados con gestor documental empresarial.',
             'Modelos relacionales, seguridad basada en roles y reportes PDF/Excel.',
-            'Administración de servidores, entornos y pipelines GitLab CI/CD.',
+            'Administración de entornos y pipelines GitLab CI/CD (dev/qa/main).',
           ],
         },
         {
           period: 'Jul 2025 – Abr 2026',
           title: 'Desarrollador de Sistemas / Sublíder Full-Stack',
-          org: 'Municipio de Pachuca de Soto',
+          org: 'Gobierno municipal',
           bullets: [
-            'Desarrollo de sistemas internos con .NET, C#, PHP, JavaScript y SQL Server.',
+            'Desarrollo de sistemas internos con .NET, C#, JavaScript y SQL Server.',
             'Coordinación de equipo, calidad de código y cumplimiento de objetivos.',
             'Administración de bases de datos e infraestructura para sistemas críticos.',
           ],
@@ -254,20 +266,20 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
         {
           period: 'Apr 2026 – Present',
           title: 'Project Lead — Integrated Human Resources System',
-          org: 'IMSS-Bienestar',
+          org: 'Public sector (health)',
           bullets: [
-            'Design and development of an integrated system with Laravel 11, PHP, and PostgreSQL.',
-            'Document management and digital records integrated with Alfresco.',
+            'Design and evolution of an integrated public-sector HR system (React 19, TypeScript, Vite, FastAPI, PostgreSQL 16, Docker).',
+            'Document management and digital records integrated with an enterprise document manager.',
             'Relational models, role-based security, and PDF/Excel reporting.',
-            'Server administration, environments, and GitLab CI/CD pipelines.',
+            'Environment operations and GitLab CI/CD pipelines (dev/qa/main).',
           ],
         },
         {
           period: 'Jul 2025 – Apr 2026',
           title: 'Systems Developer / Full-Stack Sub-Lead',
-          org: 'Municipality of Pachuca de Soto',
+          org: 'Municipal government',
           bullets: [
-            'Internal systems with .NET, C#, PHP, JavaScript, and SQL Server.',
+            'Internal systems with .NET, C#, JavaScript, and SQL Server.',
             'Team coordination, code quality, and delivery of objectives.',
             'Database and infrastructure administration for critical systems.',
           ],
@@ -313,8 +325,8 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
           period: 'Ene – Jul 2026 · Completada',
         },
       ],
-      cvEs: 'Descargar CV (ES)',
-      cvEn: 'Descargar CV (EN)',
+      cvOnRequest: 'CV disponible a solicitud',
+      cvOnRequestHint: 'Escríbeme por correo y te lo envío cuando esté actualizado.',
     },
     en: {
       title: 'Education & certifications',
@@ -335,18 +347,22 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
           period: 'Jan – Jul 2026 · Completed',
         },
       ],
-      cvEs: 'Download CV (ES)',
-      cvEn: 'Download CV (EN)',
+      cvOnRequest: 'CV available on request',
+      cvOnRequestHint: 'Email me and I will share an updated copy when ready.',
     },
   },
   contact: {
     es: {
       title: 'Contacto',
       email: 'kevinbryan_austria@outlook.com',
+      linkedin: 'Kevin Bryan Austria Galvan',
+      linkedinUrl: 'https://www.linkedin.com/in/kevin-austria-galvan-605117274',
     },
     en: {
       title: 'Contact',
       email: 'kevinbryan_austria@outlook.com',
+      linkedin: 'Kevin Bryan Austria Galvan',
+      linkedinUrl: 'https://www.linkedin.com/in/kevin-austria-galvan-605117274',
     },
   },
   status: {
@@ -358,12 +374,12 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
 
 export const stackData = {
   core: {
-    frontend: ['React', 'TypeScript', 'JavaScript'],
-    backend: ['PHP', 'Laravel', 'C#', '.NET'],
+    frontend: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    backend: ['FastAPI', 'Python', 'C#', '.NET'],
     data: ['PostgreSQL', 'SQL Server', 'SQL'],
     devops: ['Git', 'GitHub', 'GitLab', 'GitLab CI/CD', 'Docker'],
   },
-  supporting: ['Python', 'Flutter', 'Dart', 'Blade', 'Tailwind CSS', 'Bootstrap', 'VB.NET'],
+  supporting: ['Next.js', 'PHP', 'Flutter', 'Dart', 'Prisma', 'Auth.js'],
   practices: [
     'System Design',
     'REST APIs',
@@ -379,12 +395,12 @@ export const stackData = {
   growing: ['Analytics', 'Business Intelligence', 'Artificial Intelligence'],
   evidence: {
     es: [
-      'Laravel — Experiencia profesional construyendo y evolucionando sistemas empresariales.',
+      'React 19 / FastAPI — Plataforma de operaciones de personal y sistemas de RH en sector público.',
       'React / TypeScript — Frontend de Abyssan (cliente Git visual autoalojable).',
       'Docker — Entornos de aplicación y flujos de desarrollo/despliegue.',
     ],
     en: [
-      'Laravel — Professional experience building and evolving enterprise systems.',
+      'React 19 / FastAPI — Personnel operations platform and public-sector HR systems.',
       'React / TypeScript — Used to build the frontend of Abyssan.',
       'Docker — Used in application environments and dev/deploy workflows.',
     ],
@@ -433,7 +449,7 @@ export const projectsData = {
         'Regla que bloquea modificar un documento ya validado; circuito firma física → PDF firmado → cierre.',
         'Permisos por rol/área; OTP y sesión única para roles sensibles; panel de sesiones activas.',
         'Semáforo de urgencia; reportes diarios PDF/Excel; certificaciones con carga masiva.',
-        '250+ merge requests en evolución continua con GitLab CI/CD.',
+        'Evolución continua con GitLab CI/CD (ramas dev/qa/main).',
       ],
     },
     en: {
@@ -445,14 +461,14 @@ export const projectsData = {
         'Rule blocking edits to validated documents; physical signature → signed PDF → closure circuit.',
         'Role/area permissions; OTP and single session for sensitive roles; active session panel.',
         'Urgency traffic-light; daily PDF/Excel reports; bulk certification uploads.',
-        '250+ merge requests in continuous evolution with GitLab CI/CD.',
+        'Continuous evolution with GitLab CI/CD (dev/qa/main branches).',
       ],
     },
   },
   personnel: {
     status: 'PRODUCTION' as ProjectStatus,
     secondaryStatus: 'IN_DEVELOPMENT' as ProjectStatus,
-    stack: ['Laravel', 'PHP', 'PostgreSQL'],
+    stack: ['React 19', 'TypeScript', 'Vite', 'FastAPI', 'Docker', 'PostgreSQL 16'],
     es: {
       title: 'Personnel Operations Platform',
       summary: 'Plataforma construida desde cero para operaciones de personal y expedientes.',
@@ -474,23 +490,60 @@ export const projectsData = {
   },
   predial: {
     status: 'PRODUCTION' as ProjectStatus,
-    stack: ['.NET', 'C#', 'PHP', 'JavaScript', 'SQL Server'],
+    stack: ['.NET', 'C#', 'JavaScript', 'SQL Server'],
     es: {
       title: 'Digital Property-Tax Collection System',
       summary:
-        'Sistema municipal para generación y validación de códigos de barras del predial, habilitando pago a través de un canal externo de recaudación (tiendas de conveniencia).',
+        'Sistema de gobierno municipal para generación y validación de códigos de barras del predial, con pago habilitado vía canal externo de recaudación.',
       highlights: [
         'Validación de códigos y flujos alineados a procesos institucionales.',
-        'Stack alineado al ecosistema del municipio: .NET, C#, PHP, JavaScript y SQL Server.',
+        'Stack: .NET, C#, JavaScript y SQL Server.',
       ],
     },
     en: {
       title: 'Digital Property-Tax Collection System',
       summary:
-        'Municipal system for generating and validating property-tax barcodes, enabling payment through an external collection channel (convenience retail).',
+        'Municipal government system for generating and validating property-tax barcodes, with payment enabled through an external collection channel.',
       highlights: [
         'Barcode validation and workflows aligned with institutional processes.',
-        'Stack aligned to the municipality ecosystem: .NET, C#, PHP, JavaScript, and SQL Server.',
+        'Stack: .NET, C#, JavaScript, and SQL Server.',
+      ],
+    },
+  },
+  bastion: {
+    status: 'OPEN_SOURCE' as ProjectStatus,
+    secondaryStatus: 'IN_DEVELOPMENT' as ProjectStatus,
+    url: 'https://github.com/KevinBAG2001/bastion',
+    stack: [
+      'Next.js 16',
+      'TypeScript',
+      'Auth.js v5',
+      'Prisma 6',
+      'PostgreSQL',
+      'Argon2id',
+      'Playwright',
+      'CodeQL',
+    ],
+    es: {
+      title: 'Bastion',
+      tagline: 'Plataforma educativa de ciberseguridad en español',
+      summary:
+        'Open source (Apache-2.0) para principiantes: lecciones guiadas, autenticación segura y prácticas modernas. Aún no está en producción pública.',
+      highlights: [
+        'Auth.js v5, Argon2id, 2FA TOTP y verificación de contraseñas con Have I Been Pwned.',
+        'Prisma 6 + PostgreSQL; superficie pensada para auditoría y hardening progresivo.',
+        'Playwright para E2E y CodeQL en el pipeline de calidad.',
+      ],
+    },
+    en: {
+      title: 'Bastion',
+      tagline: 'Spanish-language cybersecurity learning platform',
+      summary:
+        'Apache-2.0 open source for beginners: guided lessons, secure auth, and modern practices. Not in public production yet.',
+      highlights: [
+        'Auth.js v5, Argon2id, TOTP 2FA, and Have I Been Pwned password checks.',
+        'Prisma 6 + PostgreSQL; surface designed for audit and progressive hardening.',
+        'Playwright E2E and CodeQL in the quality pipeline.',
       ],
     },
   },
@@ -574,6 +627,59 @@ export const abyssanCaseStudy = {
         id: 'roadmap',
         title: 'Roadmap',
         body: 'Phase 4 Identity → Phase 5 worktrees and forge context → Phase 6 platform (prod Compose, plugins). No AI or repo hosting in this horizon.',
+      },
+    ],
+  },
+}
+
+export const bastionCaseStudy = {
+  es: {
+    title: 'Bastion — Case study',
+    sections: [
+      {
+        id: 'problem',
+        title: 'Problema',
+        body: 'Mucho material de ciberseguridad está en inglés o asume conocimientos previos. Bastion busca una ruta en español para principiantes, con práctica real de autenticación y higiene de contraseñas sin depender de un entorno productivo expuesto.',
+      },
+      {
+        id: 'decisions',
+        title: 'Decisiones',
+        body: 'Next.js 16 y TypeScript; Auth.js v5 con sesiones explícitas; Argon2id para hashing; 2FA TOTP opcional; consulta a Have I Been Pwned en registro/cambio de contraseña; Prisma 6 sobre PostgreSQL; Apache-2.0 y desarrollo abierto sin despliegue público hasta completar el hardening.',
+      },
+      {
+        id: 'architecture',
+        title: 'Arquitectura',
+        body: 'App Router con capas de dominio para usuarios y progreso de lecciones; Prisma como ORM; middleware de auth; pruebas E2E con Playwright y análisis estático con CodeQL en CI.',
+      },
+      {
+        id: 'result',
+        title: 'Resultado',
+        body: 'Repositorio público con base de seguridad verificable (hashing, 2FA, breaches) y contenido educativo estructurado. Estado: en desarrollo — preparando primera versión demo autoalojable.',
+      },
+    ],
+  },
+  en: {
+    title: 'Bastion — Case study',
+    sections: [
+      {
+        id: 'problem',
+        title: 'Problem',
+        body: 'Much cybersecurity material is English-only or assumes prior knowledge. Bastion targets a Spanish learning path for beginners, with hands-on auth and password hygiene without relying on an exposed production environment.',
+      },
+      {
+        id: 'decisions',
+        title: 'Decisions',
+        body: 'Next.js 16 and TypeScript; Auth.js v5 with explicit sessions; Argon2id hashing; optional TOTP 2FA; Have I Been Pwned on sign-up/password change; Prisma 6 on PostgreSQL; Apache-2.0 open development with no public deploy until hardening is complete.',
+      },
+      {
+        id: 'architecture',
+        title: 'Architecture',
+        body: 'App Router with domain layers for users and lesson progress; Prisma ORM; auth middleware; Playwright E2E and CodeQL static analysis in CI.',
+      },
+      {
+        id: 'result',
+        title: 'Outcome',
+        body: 'Public repository with verifiable security baseline (hashing, 2FA, breach checks) and structured educational content. Status: in development — preparing a self-hostable demo release.',
       },
     ],
   },

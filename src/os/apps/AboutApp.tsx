@@ -12,6 +12,7 @@ export function AboutApp() {
         <h2 className="text-xl font-semibold tracking-tight">{hero.name}</h2>
         <p className="mt-1 font-medium text-[var(--color-accent)]">{hero.role}</p>
         <p className="mt-1 text-[var(--color-text-muted)]">{hero.focus}</p>
+        <p className="mt-1 text-xs text-[var(--color-text-muted)]">{hero.languages}</p>
         <p className="mt-4 text-base text-[var(--color-text)]">{hero.headline}</p>
         <p className="mt-3 text-[var(--color-text-muted)]">{hero.oneLiner}</p>
       </header>

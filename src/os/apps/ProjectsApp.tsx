@@ -2,18 +2,20 @@ import { ExternalLink, Search, Star } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { StatusBadge } from '../../components/StatusBadge'
 import { useLocale } from '../../context/LocaleContext'
-import { abyssanCaseStudy, projectsData, type ProjectStatus } from '../../i18n/translations'
+import { abyssanCaseStudy, bastionCaseStudy, projectsData, type ProjectStatus } from '../../i18n/translations'
 import { tOs } from '../i18n/osCopy'
 
 type ProjectKey = keyof typeof projectsData
 
-const PROJECT_KEYS: ProjectKey[] = ['abyssan', 'docMgmt', 'personnel', 'predial']
+const PROJECT_KEYS: ProjectKey[] = ['abyssan', 'bastion', 'docMgmt', 'personnel', 'predial']
+
+const CASE_STUDY_KEYS = new Set<ProjectKey>(['abyssan', 'bastion'])
 
 export function ProjectsApp() {
   const { locale } = useLocale()
   const t = tOs('projectsApp', locale)
   const [query, setQuery] = useState('')
-  const [view, setView] = useState<'list' | 'abyssan'>('list')
+  const [view, setView] = useState<'list' | ProjectKey>('list')
 
   const productionCount = PROJECT_KEYS.filter((k) => {
     const s = projectsData[k].status
@@ -30,9 +32,11 @@ export function ProjectsApp() {
     })
   }, [query, locale])
 
-  if (view === 'abyssan') {
-    const cs = abyssanCaseStudy[locale]
-    const aby = projectsData.abyssan[locale]
+  if (view !== 'list' && CASE_STUDY_KEYS.has(view)) {
+    const key = view
+    const cs = key === 'abyssan' ? abyssanCaseStudy[locale] : bastionCaseStudy[locale]
+    const proj = projectsData[key][locale]
+    const pdata = projectsData[key]
     return (
       <div className="flex h-full flex-col overflow-hidden">
         <div className="flex items-center gap-2 border-b border-[var(--color-border-subtle)] px-4 py-2">
@@ -46,19 +50,30 @@ export function ProjectsApp() {
         </div>
         <div className="flex-1 overflow-y-auto p-5">
           <div className="flex flex-wrap items-center gap-2">
-            <StatusBadge status="OPEN_SOURCE" />
-            <a
-              href={projectsData.abyssan.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-sm text-[var(--color-accent)] hover:underline"
-            >
-              GitHub <ExternalLink size={14} />
-            </a>
+            <StatusBadge status={pdata.status as ProjectStatus} />
+            {'secondaryStatus' in pdata && pdata.secondaryStatus ? (
+              <StatusBadge status={pdata.secondaryStatus as ProjectStatus} />
+            ) : null}
+            {'url' in pdata && pdata.url ? (
+              <a
+                href={pdata.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-[var(--color-accent)] hover:underline"
+              >
+                GitHub <ExternalLink size={14} />
+              </a>
+            ) : null}
           </div>
-          <img src="/assets/projects/abyssan/logo.svg" alt="" className="mt-4 h-12 w-12" width={48} height={48} />
-          <h2 className="mt-4 text-lg font-semibold">{aby.title}</h2>
-          <p className="mt-1 text-sm text-[var(--color-text-muted)]">{aby.tagline}</p>
+          <img
+            src={`/assets/projects/${key}/logo.svg`}
+            alt=""
+            className="mt-4 h-12 w-12"
+            width={48}
+            height={48}
+          />
+          <h2 className="mt-4 text-lg font-semibold">{proj.title}</h2>
+          {'tagline' in proj && <p className="mt-1 text-sm text-[var(--color-text-muted)]">{proj.tagline}</p>}
           <div className="mt-6 space-y-6">
             {cs.sections.map((section) => (
               <section key={section.id}>
@@ -100,7 +115,8 @@ export function ProjectsApp() {
           {filtered.map((key) => {
             const p = projectsData[key]
             const loc = p[locale]
-            const isAbyssan = key === 'abyssan'
+            const hasCaseStudy = CASE_STUDY_KEYS.has(key)
+            const repoUrl = 'url' in p ? p.url : undefined
             return (
               <article
                 key={key}
@@ -108,7 +124,7 @@ export function ProjectsApp() {
               >
                 <div className="flex items-start justify-between gap-2">
                   <h4 className="flex items-center gap-1.5 font-medium">
-                    {isAbyssan && <Star size={14} className="text-amber-400" fill="currentColor" />}
+                    {hasCaseStudy && <Star size={14} className="text-amber-400" fill="currentColor" />}
                     {loc.title}
                   </h4>
                   <StatusBadge status={p.status as ProjectStatus} />
@@ -128,23 +144,25 @@ export function ProjectsApp() {
                   ))}
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {isAbyssan && (
+                  {hasCaseStudy && (
                     <>
                       <button
                         type="button"
-                        onClick={() => setView('abyssan')}
+                        onClick={() => setView(key)}
                         className="rounded-lg bg-[var(--color-accent)] px-3 py-1.5 text-xs font-medium text-white hover:opacity-90"
                       >
                         {t.openCaseStudy}
                       </button>
-                      <a
-                        href={projectsData.abyssan.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-lg border border-[var(--color-border)] px-3 py-1.5 text-xs hover:bg-[var(--color-surface)]"
-                      >
-                        {t.openGitHub}
-                      </a>
+                      {repoUrl ? (
+                        <a
+                          href={repoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-lg border border-[var(--color-border)] px-3 py-1.5 text-xs hover:bg-[var(--color-surface)]"
+                        >
+                          {t.openGitHub}
+                        </a>
+                      ) : null}
                     </>
                   )}
                 </div>

@@ -27,6 +27,7 @@ export function HeroSection() {
             {h.name}
           </h1>
           <p className="mt-4 font-mono text-sm text-[var(--color-accent)] sm:text-base">{h.focus}</p>
+          <p className="mt-2 text-sm text-[var(--color-text-muted)]">{h.languages}</p>
           <p className="mt-6 text-xl leading-relaxed font-medium text-[var(--color-text)] sm:text-2xl">{h.headline}</p>
           <p className="mt-4 text-base leading-relaxed text-[var(--color-text-muted)]">{h.oneLiner}</p>
           <div className="mt-10 flex flex-wrap items-center gap-3">

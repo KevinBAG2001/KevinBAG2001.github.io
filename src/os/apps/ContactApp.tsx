@@ -1,5 +1,5 @@
 import { Mail } from 'lucide-react'
-import { GitHubIcon, GitLabIcon } from '../../components/icons/BrandIcons'
+import { GitHubIcon, GitLabIcon, LinkedInIcon } from '../../components/icons/BrandIcons'
 import { useState } from 'react'
 import { useLocale } from '../../context/LocaleContext'
 import { copy } from '../../i18n/translations'
@@ -8,7 +8,8 @@ import { tOs } from '../i18n/osCopy'
 export function ContactApp() {
   const { locale } = useLocale()
   const t = tOs('contactApp', locale)
-  const email = copy.contact[locale].email
+  const contact = copy.contact[locale]
+  const email = contact.email
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
 
@@ -28,6 +29,15 @@ export function ContactApp() {
         >
           <Mail className="text-[var(--color-accent)]" size={20} />
           <span className="font-mono text-sm">{email}</span>
+        </a>
+        <a
+          href={contact.linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="glass-panel flex items-center gap-3 rounded-xl p-4 hover:border-[var(--color-accent)]"
+        >
+          <LinkedInIcon className="text-[var(--color-accent)]" size={20} />
+          <span className="text-sm">{contact.linkedin}</span>
         </a>
         <a
           href="https://github.com/KevinBAG2001"

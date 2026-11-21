@@ -6,6 +6,7 @@ import { MeshBackground } from './components/MeshBackground'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
 import { DesktopShell } from './os/DesktopShell'
 import { AbyssanCaseStudyPage } from './pages/AbyssanCaseStudyPage'
+import { BastionCaseStudyPage } from './pages/BastionCaseStudyPage'
 import { HomePage } from './pages/HomePage'
 
 function ClassicLayout({ children }: { children: ReactNode }) {
@@ -21,11 +22,13 @@ function ClassicLayout({ children }: { children: ReactNode }) {
 
 function AppRoutes() {
   const location = useLocation()
-  const page = location.pathname.includes('abyssan')
-    ? 'abyssan'
-    : location.pathname.startsWith('/classic')
-      ? 'home'
-      : 'desktop'
+  const page = location.pathname.includes('bastion')
+    ? 'bastion'
+    : location.pathname.includes('abyssan')
+      ? 'abyssan'
+      : location.pathname.startsWith('/classic')
+        ? 'home'
+        : 'desktop'
   useDocumentMeta(page)
 
   return (
@@ -44,6 +47,14 @@ function AppRoutes() {
         element={
           <ClassicLayout>
             <AbyssanCaseStudyPage />
+          </ClassicLayout>
+        }
+      />
+      <Route
+        path="/projects/bastion"
+        element={
+          <ClassicLayout>
+            <BastionCaseStudyPage />
           </ClassicLayout>
         }
       />

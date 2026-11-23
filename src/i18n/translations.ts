@@ -74,11 +74,14 @@ export const copy = {
   heroVisual: {
     es: {
       pipelineLabel: 'gitlab-ci · dev/qa/main',
-      deployLine: 'deploy #105 ✔ production',
+      deployLineTemplate: '__PRODUCTION_RELEASES__ releases ✓ producción',
       branchFlow: 'Flujo dev → qa → main · despliegue continuo',
       impactCards: [
-        { metric: '307', label: 'MR fusionados (may–sep 2026) en cuatro proyectos' },
-        { metric: '105', label: 'Liberaciones a producción en el mismo periodo' },
+        {
+          metric: '__MERGED_MRS__',
+          label: 'MR fusionados (__PERIOD__) en __PROJECT_COUNT__ proyectos',
+        },
+        { metric: '__PRODUCTION_RELEASES__', label: 'Releases a producción (acumulado)' },
         {
           metric: '__PUBLIC_REPOS__',
           label: 'Repositorios públicos en GitHub (actualizado en cada build)',
@@ -87,11 +90,14 @@ export const copy = {
     },
     en: {
       pipelineLabel: 'gitlab-ci · dev/qa/main',
-      deployLine: 'deploy #105 ✔ production',
+      deployLineTemplate: '__PRODUCTION_RELEASES__ releases ✓ production',
       branchFlow: 'Branches dev → qa → main · continuous deployment',
       impactCards: [
-        { metric: '307', label: 'Merged MRs (May–Sep 2026) across 4 projects' },
-        { metric: '105', label: 'Production releases in the same period' },
+        {
+          metric: '__MERGED_MRS__',
+          label: 'Merged MRs (__PERIOD__) across __PROJECT_COUNT__ projects',
+        },
+        { metric: '__PRODUCTION_RELEASES__', label: 'Production releases (cumulative)' },
         {
           metric: '__PUBLIC_REPOS__',
           label: 'Public GitHub repos (updated at build time)',
@@ -199,7 +205,7 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
     es: {
       title: 'Impacto',
       items: [
-        'may–sep 2026: 307 MR fusionados en cuatro proyectos y 105 releases a producción (GitLab CI/CD, ramas dev/qa/main).',
+        'Acumulado __PERIOD__: __MERGED_MRS__ MR fusionados en __PROJECT_COUNT__ proyectos y __PRODUCTION_RELEASES__ releases a producción (GitLab CI/CD, dev/qa/main).',
         'Sistema integral de recursos humanos en sector público: expedientes digitales, reportes PDF/Excel y despliegues controlados.',
         'Plataforma de operaciones de personal (React 19, FastAPI, PostgreSQL 16, Docker) en evolución activa.',
         'Coordinación técnica de hasta cuatro desarrolladores en sistemas internos de gobierno municipal.',
@@ -208,7 +214,7 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
     en: {
       title: 'Impact',
       items: [
-        'May–Sep 2026: 307 merged MRs across 4 projects and 105 production releases (GitLab CI/CD, dev/qa/main).',
+        'Cumulative __PERIOD__: __MERGED_MRS__ merged MRs across __PROJECT_COUNT__ projects and __PRODUCTION_RELEASES__ production releases (GitLab CI/CD, dev/qa/main).',
         'Integrated public-sector HR system: digital records, PDF/Excel reporting, and controlled deployments.',
         'Personnel operations platform (React 19, FastAPI, PostgreSQL 16, Docker) under active development.',
         'Technical coordination of up to 4 developers on internal municipal government systems.',

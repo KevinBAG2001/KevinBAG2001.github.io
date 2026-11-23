@@ -71,7 +71,7 @@ export function TerminalApp() {
           setInput('')
         }}
       >
-        <span className="shrink-0 text-[var(--color-emerald)]">{t.prompt}</span>
+        <span className="shrink-0 text-[var(--color-secondary)]">{t.prompt}</span>
         <input
           ref={inputRef}
           value={input}

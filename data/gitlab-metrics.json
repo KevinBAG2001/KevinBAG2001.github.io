@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "period": {
+    "mode": "baseline",
+    "since": "2026-05-01T00:00:00.000Z",
+    "until": "2026-09-30T23:59:59.999Z",
+    "label": {
+      "es": "may–sep 2026",
+      "en": "May–Sep 2026"
+    }
+  },
+  "metrics": {
+    "mergedMrs": 307,
+    "productionReleases": 105,
+    "projectCount": 4
+  },
+  "updatedAt": "2026-11-23T00:00:00.000Z",
+  "provenance": "baseline-verificada"
+}

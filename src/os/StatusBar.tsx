@@ -37,8 +37,8 @@ export function StatusBar() {
         <span className="truncate text-[var(--color-text-muted)]">{hero.role}</span>
       </div>
       <div className="flex items-center gap-2 sm:gap-3">
-        <span className="hidden items-center gap-1.5 rounded-full border border-[var(--color-emerald)]/40 bg-[var(--color-emerald)]/10 px-2 py-0.5 text-[10px] text-[var(--color-emerald)] md:inline-flex">
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-emerald)]" />
+        <span className="hidden items-center gap-1.5 rounded-full border border-[var(--color-accent)]/40 bg-[color-mix(in_srgb,var(--color-accent)_12%,transparent)] px-2 py-0.5 text-[10px] text-[var(--color-accent)] md:inline-flex">
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
           {t.availability}
         </span>
         <Link

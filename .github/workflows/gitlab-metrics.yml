@@ -1,0 +1,37 @@
+name: Sync GitLab metrics
+
+on:
+  schedule:
+    - cron: '15 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Consultar GitLab (solo lectura)
+        env:
+          GITLAB_READ_TOKEN: ${{ secrets.GITLAB_READ_TOKEN }}
+          GITLAB_GROUP_ID: ${{ vars.GITLAB_GROUP_ID }}
+        run: node scripts/fetch-gitlab-metrics.mjs
+
+      - name: Commit si hubo cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/gitlab-metrics.json; then
+            echo "Sin cambios en métricas"
+            exit 0
+          fi
+          git add data/gitlab-metrics.json
+          git commit -m "chore: actualizar métricas GitLab desde API"
+          git push

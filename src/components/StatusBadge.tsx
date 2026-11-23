@@ -3,7 +3,7 @@ import { useLocale } from '../context/LocaleContext'
 import { copy } from '../i18n/translations'
 
 const styles: Record<ProjectStatus, string> = {
-  PRODUCTION: 'border-emerald-500/40 text-emerald-400 bg-emerald-500/10',
+  PRODUCTION: 'border-[var(--color-accent)]/40 text-[var(--color-accent)] bg-[color-mix(in_srgb,var(--color-accent)_12%,transparent)]',
   IN_DEVELOPMENT: 'border-amber-500/40 text-amber-400 bg-amber-500/10',
   OPEN_SOURCE: 'border-blue-500/40 text-blue-400 bg-blue-500/10',
 }

@@ -1,3 +1,4 @@
+import { withMetrics } from '../../lib/formatMetrics'
 import { Reveal } from '../Reveal'
 import { useLocale } from '../../context/LocaleContext'
 import { copy } from '../../i18n/translations'
@@ -19,7 +20,9 @@ export function ImpactSection() {
               <span className="font-mono text-3xl font-semibold text-[var(--color-accent)]/80">
                 {String(idx + 1).padStart(2, '0')}
               </span>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">{item}</p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                {withMetrics(item, locale)}
+              </p>
             </div>
           ))}
         </div>

@@ -49,7 +49,7 @@ export const APP_REGISTRY: Record<OsAppId, AppDef> = {
   contact: {
     id: 'contact',
     icon: Mail,
-    color: 'from-emerald-600 to-teal-800',
+    color: 'from-[#E23636] to-[#1E3A8A]',
     defaultSize: { w: 440, h: 480 },
     render: () => <ContactApp />,
   },

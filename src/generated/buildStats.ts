@@ -9,5 +9,5 @@ export const buildStats = {
   periodLabelEn: "May–Sep 2026",
   updatedAt: "2026-11-23T00:00:00.000Z",
 } as const,
-  fetchedAt: "2026-11-23T03:56:14.963Z",
+  fetchedAt: "2026-11-23T03:56:40.778Z",
 } as const

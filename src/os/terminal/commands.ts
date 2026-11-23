@@ -1,5 +1,5 @@
 import { buildStats } from '../../generated/buildStats'
-import { periodLabel, withMetrics } from '../../lib/formatMetrics'
+import { withMetrics } from '../../lib/formatMetrics'
 import type { Locale } from '../../i18n/translations'
 import { copy, projectsData, stackData } from '../../i18n/translations'
 
@@ -93,8 +93,7 @@ export function runTerminalCommand(input: string, locale: Locale): TerminalLine[
         'gitlab-ci · dev → qa → main',
         locale === 'es' ? `${releases} releases ✓ producción` : `${releases} releases ✓ production`,
         summary,
-        buildStats.gitlab?.updatedAt ? `metrics @ ${periodLabel(locale)}` : '',
-      ).filter((l) => l.text)
+      )
     }
     case 'sudo':
       return [{ type: 'err', text: locale === 'es' ? 'Nice try. Usa hire si quieres hablar.' : 'Nice try. Use hire if you want to talk.' }]

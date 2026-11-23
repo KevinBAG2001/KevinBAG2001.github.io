@@ -1,3 +1,5 @@
+import { buildStats } from '../../generated/buildStats'
+import { periodLabel, withMetrics } from '../../lib/formatMetrics'
 import type { Locale } from '../../i18n/translations'
 import { copy, projectsData, stackData } from '../../i18n/translations'
 
@@ -75,14 +77,25 @@ export function runTerminalCommand(input: string, locale: Locale): TerminalLine[
         'https://gitlab.com/KevinBAG2001',
         copy.contact[locale].linkedinUrl,
       )
-    case 'deploy':
+    case 'deploy': {
+      const releases = buildStats.gitlab ? String(buildStats.gitlab.productionReleases) : '—'
+      const summary =
+        locale === 'es'
+          ? withMetrics(
+              '__PERIOD__: __MERGED_MRS__ MR fusionados · __PRODUCTION_RELEASES__ releases a producción',
+              locale,
+            )
+          : withMetrics(
+              '__PERIOD__: __MERGED_MRS__ merged MRs · __PRODUCTION_RELEASES__ production releases',
+              locale,
+            )
       return lines(
         'gitlab-ci · dev → qa → main',
-        'deploy #105 ✔ production',
-        locale === 'es'
-          ? 'may–sep 2026: 307 MRs fusionados · 105 cambios a producción'
-          : 'May–Sep 2026: 307 merged MRs · 105 production releases',
-      )
+        locale === 'es' ? `${releases} releases ✓ producción` : `${releases} releases ✓ production`,
+        summary,
+        buildStats.gitlab?.updatedAt ? `metrics @ ${periodLabel(locale)}` : '',
+      ).filter((l) => l.text)
+    }
     case 'sudo':
       return [{ type: 'err', text: locale === 'es' ? 'Nice try. Usa hire si quieres hablar.' : 'Nice try. Use hire if you want to talk.' }]
     case 'exit':

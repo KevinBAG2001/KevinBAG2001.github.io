@@ -30,7 +30,7 @@ export function AboutApp() {
         </h3>
         <p className="mt-3 text-[var(--color-text-muted)]">{about.value}</p>
       </section>
-      <p className="inline-flex w-fit rounded-full border border-[var(--color-border)] px-3 py-1 text-xs text-[var(--color-emerald)]">
+      <p className="inline-flex w-fit rounded-full border border-[var(--color-border)] px-3 py-1 text-xs text-[var(--color-accent)]">
         {about.expanding}
       </p>
     </div>

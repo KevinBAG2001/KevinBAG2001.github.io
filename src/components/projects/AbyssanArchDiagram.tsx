@@ -28,8 +28,8 @@ export function AbyssanArchDiagram() {
           </div>
         ))}
       </div>
-      <p className="mt-3 flex items-center gap-2 font-mono text-[10px] text-emerald-400/90">
-        <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
+      <p className="mt-3 flex items-center gap-2 font-mono text-[10px] text-[var(--color-secondary)]">
+        <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
         {d.ws}
       </p>
     </div>

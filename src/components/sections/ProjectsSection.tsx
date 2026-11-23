@@ -83,7 +83,7 @@ export function ProjectsSection() {
               </p>
               <ul className="mt-4 space-y-2 text-sm text-[var(--color-text-muted)]">
                 {aby.highlights.slice(0, 3).map((h) => (
-                  <li key={h} className="border-l border-emerald-500/40 pl-3">
+                  <li key={h} className="border-l border-[var(--color-secondary)]/45 pl-3">
                     {h}
                   </li>
                 ))}

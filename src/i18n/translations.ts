@@ -81,7 +81,7 @@ export const copy = {
           metric: '__MERGED_MRS__',
           label: 'MR fusionados (__PERIOD__) en __PROJECT_COUNT__ proyectos',
         },
-        { metric: '__PRODUCTION_RELEASES__', label: 'Releases a producción en el mismo periodo' },
+        { metric: '__PRODUCTION_RELEASES__', label: 'Releases a producción (acumulado)' },
         {
           metric: '__PUBLIC_REPOS__',
           label: 'Repositorios públicos en GitHub (actualizado en cada build)',
@@ -97,7 +97,7 @@ export const copy = {
           metric: '__MERGED_MRS__',
           label: 'Merged MRs (__PERIOD__) across __PROJECT_COUNT__ projects',
         },
-        { metric: '__PRODUCTION_RELEASES__', label: 'Production releases in the same period' },
+        { metric: '__PRODUCTION_RELEASES__', label: 'Production releases (cumulative)' },
         {
           metric: '__PUBLIC_REPOS__',
           label: 'Public GitHub repos (updated at build time)',
@@ -205,7 +205,7 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
     es: {
       title: 'Impacto',
       items: [
-        '__PERIOD__: __MERGED_MRS__ MR fusionados en __PROJECT_COUNT__ proyectos y __PRODUCTION_RELEASES__ releases a producción (GitLab CI/CD, ramas dev/qa/main).',
+        'Acumulado __PERIOD__: __MERGED_MRS__ MR fusionados en __PROJECT_COUNT__ proyectos y __PRODUCTION_RELEASES__ releases a producción (GitLab CI/CD, dev/qa/main).',
         'Sistema integral de recursos humanos en sector público: expedientes digitales, reportes PDF/Excel y despliegues controlados.',
         'Plataforma de operaciones de personal (React 19, FastAPI, PostgreSQL 16, Docker) en evolución activa.',
         'Coordinación técnica de hasta cuatro desarrolladores en sistemas internos de gobierno municipal.',
@@ -214,7 +214,7 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
     en: {
       title: 'Impact',
       items: [
-        '__PERIOD__: __MERGED_MRS__ merged MRs across __PROJECT_COUNT__ projects and __PRODUCTION_RELEASES__ production releases (GitLab CI/CD, dev/qa/main).',
+        'Cumulative __PERIOD__: __MERGED_MRS__ merged MRs across __PROJECT_COUNT__ projects and __PRODUCTION_RELEASES__ production releases (GitLab CI/CD, dev/qa/main).',
         'Integrated public-sector HR system: digital records, PDF/Excel reporting, and controlled deployments.',
         'Personnel operations platform (React 19, FastAPI, PostgreSQL 16, Docker) under active development.',
         'Technical coordination of up to 4 developers on internal municipal government systems.',

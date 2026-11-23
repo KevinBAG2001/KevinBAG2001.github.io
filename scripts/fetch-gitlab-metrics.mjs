@@ -7,10 +7,24 @@ const metricsPath = join(root, 'data', 'gitlab-metrics.json')
 
 const API = (process.env.GITLAB_API_URL || 'https://gitlab.com/api/v4').replace(/\/$/, '')
 const token = process.env.GITLAB_READ_TOKEN
-const groupId = process.env.GITLAB_GROUP_ID
+const groupId = process.env.GITLAB_GROUP_ID'
+
+/** Inicio fijo del acumulado; `until` avanza con cada ejecución exitosa del workflow. */
+const DEFAULT_SINCE = '2026-05-01T00:00:00.000Z'
+
+const LABELS_CUMULATIVE = {
+  es: 'desde may 2026',
+  en: 'since May 2026',
+}
 
 function loadExisting() {
   return JSON.parse(readFileSync(metricsPath, 'utf8'))
+}
+
+function endOfTodayUtc() {
+  const d = new Date()
+  d.setUTCHours(23, 59, 59, 999)
+  return d.toISOString()
 }
 
 async function gitlabGet(path, searchParams = {}) {
@@ -74,9 +88,8 @@ async function main() {
     process.exit(0)
   }
 
-  const existing = loadExisting()
-  const since = process.env.GITLAB_METRICS_SINCE || existing.period.since
-  const until = process.env.GITLAB_METRICS_UNTIL || existing.period.until
+  const since = process.env.GITLAB_METRICS_SINCE || DEFAULT_SINCE
+  const until = process.env.GITLAB_METRICS_UNTIL || endOfTodayUtc()
 
   const projects = await listGroupProjects(groupId)
   if (projects.length === 0) {
@@ -94,9 +107,10 @@ async function main() {
   const next = {
     version: 1,
     period: {
-      ...existing.period,
+      mode: 'cumulative',
       since,
       until,
+      label: { ...LABELS_CUMULATIVE },
     },
     metrics: {
       mergedMrs,
@@ -109,7 +123,7 @@ async function main() {
 
   writeFileSync(metricsPath, `${JSON.stringify(next, null, 2)}\n`)
   console.log(
-    `fetch-gitlab-metrics: mergedMrs=${mergedMrs} productionReleases=${productionReleases} projects=${projects.length}`,
+    `fetch-gitlab-metrics: cumulative since=${since} until=${until} mergedMrs=${mergedMrs} productionReleases=${productionReleases} projects=${projects.length}`,
   )
 }
 

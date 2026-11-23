@@ -82,11 +82,11 @@ export function runTerminalCommand(input: string, locale: Locale): TerminalLine[
       const summary =
         locale === 'es'
           ? withMetrics(
-              '__PERIOD__: __MERGED_MRS__ MR fusionados · __PRODUCTION_RELEASES__ releases a producción',
+              'Acumulado __PERIOD__: __MERGED_MRS__ MR fusionados · __PRODUCTION_RELEASES__ releases a producción',
               locale,
             )
           : withMetrics(
-              '__PERIOD__: __MERGED_MRS__ merged MRs · __PRODUCTION_RELEASES__ production releases',
+              'Cumulative __PERIOD__: __MERGED_MRS__ merged MRs · __PRODUCTION_RELEASES__ production releases',
               locale,
             )
       return lines(

@@ -5,7 +5,7 @@ export const copy = {
     es: {
       title: 'Kevin Bryan Austria Galvan — Full-Stack Developer',
       description:
-        'Desarrollo software de extremo a extremo, conectando desarrollo, datos y entrega para llevar soluciones desde la idea hasta producción.',
+        'Desarrollo software de punta a punta: ingeniería, datos y entrega continua para llevar ideas hasta producción con criterio.',
     },
     en: {
       title: 'Kevin Bryan Austria Galvan — Full-Stack Developer',
@@ -17,7 +17,7 @@ export const copy = {
     es: {
       about: 'Sobre mí',
       stack: 'Stack',
-      build: 'Cómo construyo',
+      build: 'Mi forma de construir',
       projects: 'Proyectos',
       impact: 'Impacto',
       experience: 'Experiencia',
@@ -49,11 +49,11 @@ export const copy = {
     es: {
       name: 'Kevin Bryan Austria Galvan',
       role: 'Full-Stack Developer',
-      focus: 'Ingeniería de Software · DevOps · Datos',
-      headline: 'Construyo software para problemas reales, desde la idea hasta producción.',
+      focus: 'Ingeniería de software · DevOps · Datos',
+      headline: 'Construyo software para problemas reales, de la idea a producción.',
       oneLiner:
-        'Desarrollo software de extremo a extremo, conectando desarrollo, datos y entrega para llevar soluciones desde la idea hasta producción.',
-      availability: 'Disponible para freelance y trabajo remoto',
+        'Trabajo todo el ciclo: análisis, implementación, integración y operación, con datos y automatización como parte del mismo criterio.',
+      availability: 'Disponible para proyectos freelance y trabajo remoto',
       languages: 'Español nativo · Inglés básico',
       abyssanCaseStudy: 'Caso de estudio: Abyssan',
       bastionCaseStudy: 'Caso de estudio: Bastion',
@@ -75,13 +75,13 @@ export const copy = {
     es: {
       pipelineLabel: 'gitlab-ci · dev/qa/main',
       deployLine: 'deploy #105 ✔ production',
-      branchFlow: 'Ramas dev → qa → main · despliegue continuo',
+      branchFlow: 'Flujo dev → qa → main · despliegue continuo',
       impactCards: [
-        { metric: '307', label: 'MRs fusionados (may–sep 2026) en 4 proyectos' },
-        { metric: '105', label: 'Cambios liberados a producción (mismo periodo)' },
+        { metric: '307', label: 'MR fusionados (may–sep 2026) en cuatro proyectos' },
+        { metric: '105', label: 'Liberaciones a producción en el mismo periodo' },
         {
           metric: '__PUBLIC_REPOS__',
-          label: 'Repos públicos en GitHub (actualizado en build)',
+          label: 'Repositorios públicos en GitHub (actualizado en cada build)',
         },
       ],
     },
@@ -105,7 +105,7 @@ export const copy = {
       web: 'Web SPA',
       api: 'API Express',
       git: 'Git adapter',
-      ws: 'WebSocket · cambios en repo',
+      ws: 'WebSocket · cambios en el repositorio',
     },
     en: {
       title: 'Architecture',
@@ -118,12 +118,12 @@ export const copy = {
   about: {
     es: {
       title: 'Sobre mí',
-      description: `Soy Full-Stack Developer enfocado en construir y evolucionar software para problemas reales, trabajando a lo largo de todo el ciclo de desarrollo: desde el análisis y diseño de soluciones hasta la implementación, integración, despliegue y evolución en producción.
-Mi experiencia combina desarrollo frontend y backend, diseño de APIs, bases de datos relacionales, automatización, CI/CD y administración de entornos, con participación en sistemas empresariales y proyectos donde también he asumido responsabilidades de liderazgo técnico y coordinación.
-Actualmente continúo desarrollando mi perfil hacia los datos, la analítica y la inteligencia artificial, complementando mi experiencia en ingeniería de software con una Maestría en Analítica e Inteligencia de Negocios.`,
-      valueTitle: 'Propuesta de valor',
-      value: `Convierto necesidades de negocio y operación en soluciones de software que pueden desarrollarse, desplegarse y evolucionar de forma sostenible. Combino desarrollo Full-Stack, datos, automatización y prácticas DevOps para participar en todo el ciclo de vida del software, buscando que una solución no sólo funcione, sino que también sea mantenible, integrable y preparada para producción.`,
-      expanding: 'En expansión: Datos, Analítica e IA',
+      description: `Soy desarrollador Full-Stack orientado a problemas reales. Trabajo todo el ciclo: análisis, diseño, implementación, integración, despliegue y evolución en producción.
+Combino frontend y backend, APIs, bases relacionales, automatización, CI/CD y operación de entornos, con experiencia en sistemas empresariales y roles de liderazgo técnico y coordinación.
+Hoy amplío mi perfil hacia datos, analítica e inteligencia artificial mediante una maestría en Analítica e Inteligencia de Negocios, en paralelo a mi práctica de ingeniería.`,
+      valueTitle: 'Qué aporto',
+      value: `Traduzco necesidades de negocio y operación en software que se puede construir, desplegar y mantener sin fricción. Integro desarrollo Full-Stack, datos, automatización y DevOps en un solo criterio: que la solución funcione, sea integrable y aguante producción.`,
+      expanding: 'En crecimiento: datos, analítica e IA',
     },
     en: {
       title: 'About',
@@ -137,12 +137,12 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
   },
   stack: {
     es: {
-      title: 'Con qué trabajo',
+      title: 'Stack y herramientas',
       core: 'Núcleo',
       supporting: 'Complemento',
       practices: 'Prácticas de ingeniería',
-      growing: 'En crecimiento',
-      evidence: 'Profundidad por evidencia',
+      growing: 'En desarrollo',
+      evidence: 'Experiencia comprobable',
       rowFrontend: 'Frontend',
       rowBackend: 'Backend',
       rowData: 'Datos',
@@ -163,13 +163,13 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
   },
   howBuild: {
     es: {
-      title: 'Cómo construyo',
+      title: 'Mi forma de construir',
       flow: 'Construir → Probar → Automatizar → Desplegar → Mejorar',
-      architecture: 'Arquitectura — Diseño por capas, contratos claros y separación de responsabilidades.',
+      architecture: 'Arquitectura — Capas claras, contratos explícitos y responsabilidades separadas.',
       development: 'Desarrollo — APIs REST, frontends mantenibles y dominio alineado al negocio.',
       data: 'Datos — Modelado relacional, consultas eficientes y trazabilidad en producción.',
-      delivery: 'Entrega — GitFlow dev/qa/main, pipelines GitLab CI/CD y automatización.',
-      production: 'Producción — Operación de entornos, despliegues controlados y evolución continua.',
+      delivery: 'Entrega — GitFlow dev/qa/main, pipelines en GitLab CI/CD y automatización.',
+      production: 'Producción — Operación de entornos, releases controlados y mejora continua.',
     },
     en: {
       title: 'How I build',
@@ -184,8 +184,8 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
   projects: {
     es: {
       title: 'Proyectos destacados',
-      subtitle: 'Open source y trabajo profesional (casos anonimizados)',
-      openSource: 'Open Source / Personal',
+      subtitle: 'Open source y trabajo profesional (casos con nombres anonimizados)',
+      openSource: 'Open source / personal',
       professional: 'Trabajo profesional',
     },
     en: {
@@ -199,10 +199,10 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
     es: {
       title: 'Impacto',
       items: [
-        'may–sep 2026: 307 merge requests fusionados en 4 proyectos y 105 cambios liberados a producción (GitLab CI/CD, ramas dev/qa/main).',
-        'Sistema integral de RH para sector público: expedientes digitales, reportes PDF/Excel y despliegues controlados.',
+        'may–sep 2026: 307 MR fusionados en cuatro proyectos y 105 releases a producción (GitLab CI/CD, ramas dev/qa/main).',
+        'Sistema integral de recursos humanos en sector público: expedientes digitales, reportes PDF/Excel y despliegues controlados.',
         'Plataforma de operaciones de personal (React 19, FastAPI, PostgreSQL 16, Docker) en evolución activa.',
-        'Coordinación técnica de hasta 4 desarrolladores en sistemas internos de gobierno municipal.',
+        'Coordinación técnica de hasta cuatro desarrolladores en sistemas internos de gobierno municipal.',
       ],
     },
     en: {
@@ -224,10 +224,10 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
           title: 'Líder de Proyecto — Sistema Integral de Recursos Humanos',
           org: 'Sector público (salud)',
           bullets: [
-            'Diseño y evolución de un sistema integral de RH para sector público (React 19, TypeScript, Vite, FastAPI, PostgreSQL 16, Docker).',
-            'Gestión documental y expedientes digitales integrados con gestor documental empresarial.',
-            'Modelos relacionales, seguridad basada en roles y reportes PDF/Excel.',
-            'Administración de entornos y pipelines GitLab CI/CD (dev/qa/main).',
+            'Diseño y evolución de un sistema integral de RH en sector público (React 19, TypeScript, Vite, FastAPI, PostgreSQL 16, Docker).',
+            'Gestión documental y expedientes digitales conectados a un gestor documental empresarial.',
+            'Modelos relacionales, seguridad por roles y reportes PDF/Excel.',
+            'Operación de entornos y pipelines en GitLab CI/CD (dev/qa/main).',
           ],
         },
         {
@@ -236,7 +236,7 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
           org: 'Gobierno municipal',
           bullets: [
             'Desarrollo de sistemas internos con .NET, C#, JavaScript y SQL Server.',
-            'Coordinación de equipo, calidad de código y cumplimiento de objetivos.',
+            'Coordinación de equipo, calidad de código y cumplimiento de entregables.',
             'Administración de bases de datos e infraestructura para sistemas críticos.',
           ],
         },
@@ -245,8 +245,8 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
           title: 'Supervisor de Turno / Capacitador',
           org: 'Starbucks',
           bullets: [
-            'Supervisión de operaciones y coordinación de equipos por turno.',
-            'Capacitación de colaboradores en procedimientos y servicio al cliente.',
+            'Supervisión de operación diaria y coordinación de equipos por turno.',
+            'Capacitación en procedimientos operativos y servicio al cliente.',
           ],
         },
         {
@@ -255,7 +255,7 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
           org: 'Hopewell System',
           bullets: [
             'Aplicaciones web y móviles con Flutter, Dart, JavaScript y PostgreSQL.',
-            'Integración de sistemas y gestión de código con Git.',
+            'Integración entre sistemas y control de versiones con Git.',
           ],
         },
       ],
@@ -326,7 +326,7 @@ I'm currently expanding my profile into data, analytics, and artificial intellig
         },
       ],
       cvOnRequest: 'CV disponible a solicitud',
-      cvOnRequestHint: 'Escríbeme por correo y te lo envío cuando esté actualizado.',
+      cvOnRequestHint: 'Escríbeme por correo y te comparto la versión actualizada.',
     },
     en: {
       title: 'Education & certifications',
@@ -396,8 +396,8 @@ export const stackData = {
   evidence: {
     es: [
       'React 19 / FastAPI — Plataforma de operaciones de personal y sistemas de RH en sector público.',
-      'React / TypeScript — Frontend de Abyssan (cliente Git visual autoalojable).',
-      'Docker — Entornos de aplicación y flujos de desarrollo/despliegue.',
+      'React / TypeScript — Frontend de Abyssan, cliente Git visual autoalojable.',
+      'Docker — Entornos de aplicación y flujos de desarrollo y despliegue.',
     ],
     en: [
       'React 19 / FastAPI — Personnel operations platform and public-sector HR systems.',
@@ -418,11 +418,11 @@ export const projectsData = {
       title: 'Abyssan',
       tagline: 'Cliente Git visual, local y autoalojable',
       summary:
-        'Monorepo pnpm con SPA React y backend Node: grafo DAG, staging visual, diff y operaciones Git con arquitectura por capas y DDD ligero.',
+        'Monorepo en pnpm con SPA en React y backend en Node: grafo DAG, staging visual, diff y operaciones Git con capas y DDD ligero.',
       highlights: [
-        'Notificaciones en tiempo real de cambios en repos vía WebSocket.',
-        'Sandbox de rutas bajo PROJECTS_ROOT y confirmación para operaciones destructivas.',
-        'Empaque con Docker Compose para API + interfaz.',
+        'Notificaciones en tiempo real de cambios en repositorios vía WebSocket.',
+        'Sandbox de rutas bajo PROJECTS_ROOT y confirmación en operaciones destructivas.',
+        'Empaque con Docker Compose para API e interfaz.',
       ],
     },
     en: {
@@ -443,12 +443,12 @@ export const projectsData = {
     es: {
       title: 'Document Management & Operational Tracking System',
       summary:
-        'Sistema empresarial para sector público: gestión documental, flujos de validación y trazabilidad operativa con integraciones a gestor documental y almacenamiento en nube.',
+        'Sistema empresarial en sector público: gestión documental, flujos de validación y trazabilidad operativa, con gestor documental y almacenamiento en nube.',
       highlights: [
-        'Integración con Alfresco y Nextcloud; flujos de conocimiento, seguimiento, validación y conclusión.',
-        'Regla que bloquea modificar un documento ya validado; circuito firma física → PDF firmado → cierre.',
-        'Permisos por rol/área; OTP y sesión única para roles sensibles; panel de sesiones activas.',
-        'Semáforo de urgencia; reportes diarios PDF/Excel; certificaciones con carga masiva.',
+        'Integración con Alfresco y Nextcloud; flujos de conocimiento, seguimiento, validación y cierre.',
+        'Bloqueo de edición en documentos ya validados; circuito firma física → PDF firmado → cierre.',
+        'Permisos por rol y área; OTP y sesión única en roles sensibles; panel de sesiones activas.',
+        'Semáforo de urgencia; reportes diarios en PDF/Excel; certificaciones con carga masiva.',
         'Evolución continua con GitLab CI/CD (ramas dev/qa/main).',
       ],
     },
@@ -471,11 +471,11 @@ export const projectsData = {
     stack: ['React 19', 'TypeScript', 'Vite', 'FastAPI', 'Docker', 'PostgreSQL 16'],
     es: {
       title: 'Personnel Operations Platform',
-      summary: 'Plataforma construida desde cero para operaciones de personal y expedientes.',
+      summary: 'Plataforma hecha desde cero para operaciones de personal y expedientes.',
       highlights: [
         'Captura diaria, roles, reportes diarios y expedientes con autocaptura.',
-        'Metas desde Excel, guardias, historial por persona/mes, vacaciones e incidencias.',
-        'Capacitación, productividad con exportación PDF.',
+        'Metas desde Excel, guardias, historial por persona y mes, vacaciones e incidencias.',
+        'Capacitación y productividad con exportación a PDF.',
       ],
     },
     en: {
@@ -494,7 +494,7 @@ export const projectsData = {
     es: {
       title: 'Digital Property-Tax Collection System',
       summary:
-        'Sistema de gobierno municipal para generación y validación de códigos de barras del predial, con pago habilitado vía canal externo de recaudación.',
+        'Sistema municipal para generar y validar códigos de barras de predial, con pago habilitado por un canal externo de recaudación.',
       highlights: [
         'Validación de códigos y flujos alineados a procesos institucionales.',
         'Stack: .NET, C#, JavaScript y SQL Server.',
@@ -528,11 +528,11 @@ export const projectsData = {
       title: 'Bastion',
       tagline: 'Plataforma educativa de ciberseguridad en español',
       summary:
-        'Open source (Apache-2.0) para principiantes: lecciones guiadas, autenticación segura y prácticas modernas. Aún no está en producción pública.',
+        'Proyecto open source (Apache-2.0) para principiantes: lecciones guiadas, autenticación segura y prácticas actuales. Aún sin despliegue público.',
       highlights: [
-        'Auth.js v5, Argon2id, 2FA TOTP y verificación de contraseñas con Have I Been Pwned.',
-        'Prisma 6 + PostgreSQL; superficie pensada para auditoría y hardening progresivo.',
-        'Playwright para E2E y CodeQL en el pipeline de calidad.',
+        'Auth.js v5, Argon2id, 2FA TOTP y revisión de contraseñas con Have I Been Pwned.',
+        'Prisma 6 y PostgreSQL; superficie pensada para auditoría y endurecimiento progresivo.',
+        'Playwright para pruebas E2E y CodeQL en el pipeline de calidad.',
       ],
     },
     en: {
@@ -556,37 +556,37 @@ export const abyssanCaseStudy = {
       {
         id: 'problem',
         title: 'Problema',
-        body: 'Los clientes Git maduros cubren operaciones básicas, pero rara vez ayudan a entender el efecto de un merge o reset antes de ejecutarlo. Abyssan apunta a Git visual + comprensión + seguridad en un cliente local autoalojable.',
+        body: 'Los clientes Git maduros cubren lo básico, pero pocas veces muestran el efecto de un merge o reset antes de ejecutarlo. Abyssan busca Git visual, comprensión y seguridad en un cliente local autoalojable.',
       },
       {
         id: 'decisions',
         title: 'Decisiones',
-        body: 'Monorepo pnpm; un adaptador Git (simple-git) sin shell arbitrario; envelope JSON único en API; español de producto; confirmación explícita para operaciones destructivas; sin base de datos en v1.',
+        body: 'Monorepo en pnpm; adaptador Git único (simple-git) sin shell arbitrario; respuestas JSON uniformes en la API; copy en español; confirmación explícita en operaciones destructivas; sin base de datos en v1.',
       },
       {
         id: 'architecture',
         title: 'Arquitectura',
-        body: 'HTTP → GitController → GitUseCases → SimpleGitAdapter. SPA React 19 + Vite 6 + Tailwind 4; servidor Express con WebSocket (chokidar) para cambios en repos bajo PROJECTS_ROOT.',
+        body: 'HTTP → GitController → GitUseCases → SimpleGitAdapter. SPA en React 19 con Vite 6 y Tailwind 4; servidor Express con WebSocket (chokidar) para cambios bajo PROJECTS_ROOT.',
       },
       {
         id: 'security',
         title: 'Seguridad',
-        body: 'validarRutaRepositorio fuera de PROJECTS_ROOT → 403; CORS restringido; token de instancia fuera de localhost; WebSocket con handshake AUTH; sin registrar diffs completos en producción.',
+        body: 'Rutas fuera de PROJECTS_ROOT devuelven 403; CORS restringido; token de instancia fuera de localhost; WebSocket con handshake AUTH; sin log de diffs completos en producción.',
       },
       {
         id: 'testing',
         title: 'Testing',
-        body: 'Vitest y oxlint en el monorepo; subconjunto de pruebas de perímetro de seguridad (pnpm test:seguridad).',
+        body: 'Vitest y oxlint en el monorepo; batería de pruebas de perímetro de seguridad (pnpm test:seguridad).',
       },
       {
         id: 'status',
         title: 'Estado',
-        body: 'Fases 0–3 cerradas (Daily Driver, power, forjas OAuth). Siguiente horizonte: Identidad — preview antes de merge/rebase, journal de undo y Explain Mode.',
+        body: 'Fases 0–3 cerradas (Daily Driver, power, OAuth con forjas). Siguiente horizonte: Identidad — vista previa antes de merge/rebase, diario de deshacer y Explain Mode.',
       },
       {
         id: 'roadmap',
         title: 'Roadmap',
-        body: 'Fase 4 Identidad → Fase 5 worktrees y contexto de forja → Fase 6 plataforma (Compose prod, plugins). Sin IA ni host de repos en este horizonte.',
+        body: 'Fase 4 Identidad → Fase 5 worktrees y contexto de forja → Fase 6 plataforma (Compose de producción, plugins). Sin IA ni hosting de repos en este horizonte.',
       },
     ],
   },
@@ -639,22 +639,22 @@ export const bastionCaseStudy = {
       {
         id: 'problem',
         title: 'Problema',
-        body: 'Mucho material de ciberseguridad está en inglés o asume conocimientos previos. Bastion busca una ruta en español para principiantes, con práctica real de autenticación y higiene de contraseñas sin depender de un entorno productivo expuesto.',
+        body: 'Gran parte del material de ciberseguridad está en inglés o asume bases previas. Bastion ofrece una ruta en español para principiantes, con práctica de autenticación e higiene de contraseñas sin exponer un entorno productivo.',
       },
       {
         id: 'decisions',
         title: 'Decisiones',
-        body: 'Next.js 16 y TypeScript; Auth.js v5 con sesiones explícitas; Argon2id para hashing; 2FA TOTP opcional; consulta a Have I Been Pwned en registro/cambio de contraseña; Prisma 6 sobre PostgreSQL; Apache-2.0 y desarrollo abierto sin despliegue público hasta completar el hardening.',
+        body: 'Next.js 16 y TypeScript; Auth.js v5 con sesiones explícitas; Argon2id; 2FA TOTP opcional; consulta a Have I Been Pwned al registrar o cambiar contraseña; Prisma 6 sobre PostgreSQL; Apache-2.0 con desarrollo abierto y sin despliegue público hasta cerrar el endurecimiento.',
       },
       {
         id: 'architecture',
         title: 'Arquitectura',
-        body: 'App Router con capas de dominio para usuarios y progreso de lecciones; Prisma como ORM; middleware de auth; pruebas E2E con Playwright y análisis estático con CodeQL en CI.',
+        body: 'App Router con capas de dominio para usuarios y progreso de lecciones; Prisma como ORM; middleware de autenticación; E2E con Playwright y análisis estático con CodeQL en CI.',
       },
       {
         id: 'result',
         title: 'Resultado',
-        body: 'Repositorio público con base de seguridad verificable (hashing, 2FA, breaches) y contenido educativo estructurado. Estado: en desarrollo — preparando primera versión demo autoalojable.',
+        body: 'Repositorio público con base de seguridad verificable (hash, 2FA, filtraciones) y contenido educativo estructurado. Estado: en desarrollo, preparando una primera demo autoalojable.',
       },
     ],
   },

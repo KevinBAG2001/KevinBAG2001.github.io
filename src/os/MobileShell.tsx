@@ -37,7 +37,7 @@ export function MobileShell() {
           </button>
         </div>
         <p className="mt-2 text-xs text-[var(--color-emerald)]">{copy.hero[locale].availability}</p>
-        <Link to="/classic" className="mt-2 inline-block text-xs text-[var(--color-accent)]">
+        <Link to="/" className="mt-2 inline-block text-xs text-[var(--color-accent)]">
           {tOs('statusBar', locale).classicView}
         </Link>
       </header>

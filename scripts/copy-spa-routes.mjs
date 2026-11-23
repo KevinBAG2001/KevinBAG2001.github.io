@@ -7,7 +7,7 @@ const dist = join(root, 'dist')
 const indexHtml = readFileSync(join(dist, 'index.html'), 'utf8')
 
 /** Rutas con index.html propio para GitHub Pages (HTTP 200, sin depender de 404.html). */
-const spaRoutes = ['classic', 'projects/abyssan', 'projects/bastion']
+const spaRoutes = ['classic', 'os', 'projects/abyssan', 'projects/bastion']
 
 for (const route of spaRoutes) {
   const dir = join(dist, route)

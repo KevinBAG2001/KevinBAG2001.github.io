@@ -39,7 +39,7 @@ export function HeroPipelineVisual() {
 
   return (
     <div className="flex flex-col gap-4" aria-hidden>
-      <div className="glass-panel overflow-hidden rounded-2xl border border-[var(--color-border)] shadow-[0_24px_80px_-24px_rgba(59,130,246,0.25)]">
+      <div className="glass-panel overflow-hidden rounded-2xl border border-[var(--color-border)] shadow-[0_24px_80px_-24px_rgba(226,54,54,0.22)]">
         <div className="flex items-center gap-2 border-b border-[var(--color-border-subtle)] px-4 py-3">
           <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
           <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />

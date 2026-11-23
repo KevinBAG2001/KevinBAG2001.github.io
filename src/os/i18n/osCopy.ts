@@ -5,7 +5,7 @@ export const osCopy = {
     es: {
       title: 'Kevin OS — Portfolio',
       description:
-        'Portafolio interactivo de Kevin Bryan Austria Galvan. Full-Stack Developer — software de idea a producción.',
+        'Portafolio interactivo de Kevin Bryan Austria Galvan. Desarrollo Full-Stack de la idea a producción.',
     },
     en: {
       title: 'Kevin OS — Portfolio',
@@ -34,7 +34,7 @@ export const osCopy = {
   statusBar: {
     es: {
       availability: 'Disponible para freelance y remoto',
-      classicView: 'Vista clásica',
+      classicView: 'Vista portafolio',
       localeEs: 'ES',
       localeEn: 'EN',
     },
@@ -99,7 +99,7 @@ export const osCopy = {
     es: {
       tabs: { experience: 'Experiencia', education: 'Formación', impact: 'Impacto' },
       downloadHint: 'CV PDF (si está disponible en el sitio)',
-      noCv: 'CV disponible a solicitud por correo — los PDF volverán al sitio cuando estén actualizados.',
+      noCv: 'CV disponible a solicitud por correo; comparto la versión actualizada cuando la pidas.',
     },
     en: {
       tabs: { experience: 'Experience', education: 'Education', impact: 'Impact' },
@@ -109,7 +109,7 @@ export const osCopy = {
   },
   contactApp: {
     es: {
-      intro: 'Correo directo o repos públicos. El formulario abre tu cliente de correo.',
+      intro: 'Escríbeme por correo o revisa los repos públicos. El formulario abre tu cliente de correo.',
       name: 'Nombre',
       message: 'Mensaje',
       send: 'Enviar correo',
@@ -129,10 +129,10 @@ export const osCopy = {
     es: {
       title: 'Terminal',
       banner:
-        'Shell local de Kevin OS. Escribe help para comandos; algunos incluyen detalles técnicos del portafolio.',
+        'Terminal local de Kevin OS. Escribe help para ver comandos; algunos muestran detalles técnicos del portafolio.',
       prompt: 'kevin@kevin-os:~$',
       welcome: `Kevin OS Terminal v1.0.0
-Type 'help' for commands · 'about' for profile · 'hire' for contact.`,
+Escribe help para comandos · about para perfil · hire para contacto.`,
     },
     en: {
       title: 'Terminal',
@@ -146,7 +146,7 @@ Type 'help' for commands · 'about' for profile · 'hire' for contact.`,
   assistant: {
     es: {
       title: 'Asistente',
-      subtitle: 'Respuestas estáticas basadas en el contenido del portafolio (sin API externa).',
+      subtitle: 'Respuestas fijas basadas en el contenido del portafolio, sin API externa.',
       placeholder: 'Pregunta sobre proyectos, stack o contacto…',
       send: 'Enviar',
       suggestions: [
@@ -156,7 +156,7 @@ Type 'help' for commands · 'about' for profile · 'hire' for contact.`,
         'Cuéntame de Abyssan',
       ],
       fallback:
-        'No tengo una respuesta preparada para eso. Prueba con proyectos, stack, experiencia o contacto.',
+        'No tengo una respuesta preparada para eso. Prueba preguntar por proyectos, stack, experiencia o contacto.',
     },
     en: {
       title: 'Assistant',
@@ -177,7 +177,7 @@ Type 'help' for commands · 'about' for profile · 'hire' for contact.`,
     es: {
       title: 'Kevin Bryan Austria Galvan',
       subtitle: 'Full-Stack Developer · Vista móvil',
-      hint: 'En pantallas grandes, abre Kevin OS en el escritorio.',
+      hint: 'En pantalla grande puedes usar Kevin OS en el escritorio.',
     },
     en: {
       title: 'Kevin Bryan Austria Galvan',

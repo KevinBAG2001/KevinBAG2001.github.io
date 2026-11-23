@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
-import { MeshBackground } from './components/MeshBackground'
+import { CinematicBackground } from './components/CinematicBackground'
 import { useDocumentMeta } from './hooks/useDocumentMeta'
 import { DesktopShell } from './os/DesktopShell'
 import { AbyssanCaseStudyPage } from './pages/AbyssanCaseStudyPage'
@@ -12,7 +12,7 @@ import { HomePage } from './pages/HomePage'
 function ClassicLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <MeshBackground />
+      <CinematicBackground />
       <Header />
       <main id="main">{children}</main>
       <Footer />
@@ -26,14 +26,22 @@ function AppRoutes() {
     ? 'bastion'
     : location.pathname.includes('abyssan')
       ? 'abyssan'
-      : location.pathname.startsWith('/classic')
-        ? 'home'
-        : 'desktop'
+      : location.pathname.startsWith('/os')
+        ? 'desktop'
+        : 'home'
   useDocumentMeta(page)
 
   return (
     <Routes>
-      <Route path="/" element={<DesktopShell />} />
+      <Route
+        path="/"
+        element={
+          <ClassicLayout>
+            <HomePage />
+          </ClassicLayout>
+        }
+      />
+      <Route path="/os" element={<DesktopShell />} />
       <Route
         path="/classic"
         element={

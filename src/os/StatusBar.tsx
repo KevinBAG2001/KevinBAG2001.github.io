@@ -42,7 +42,7 @@ export function StatusBar() {
           {t.availability}
         </span>
         <Link
-          to="/classic"
+          to="/"
           className="hidden text-[var(--color-text-muted)] hover:text-[var(--color-text)] lg:inline"
         >
           {t.classicView}
